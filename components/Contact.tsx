@@ -23,7 +23,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-white/40">Call Us</p>
-                    <p className="text-lg font-semibold">+254 700 000000</p>
+                    <p className="text-lg font-semibold">+254 790 495816</p>
                   </div>
                 </div>
 
@@ -43,7 +43,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-white/40">Visit Us</p>
-                    <p className="text-lg font-semibold">Nairobi, Kenya</p>
+                    <p className="text-lg font-semibold">Mombasa, Kenya</p>
                   </div>
                 </div>
 
