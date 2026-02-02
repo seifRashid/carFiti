@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Star, Users, CheckCircle } from "lucide-react";
 import React from "react";
+import ShinyText from "@/components/ShinyText";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -12,6 +13,10 @@ export default function Hero() {
 
   const title = "Professional Car Care You Can Trust";
   const words = title.split(" ");
+  
+  // Custom theme colors for ShinyText
+  const charcoal = "#0f172a";
+  const primary = "#2563eb";
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -89,24 +94,29 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-charcoal leading-[1.1] mb-6 lg:mb-8 tracking-tighter perspective-1000">
-              {words.map((word, wordIndex) => (
-                <span key={wordIndex} className="inline-block mr-3 last:mr-0 whitespace-nowrap">
-                  {word.split("").map((letter, letterIndex) => (
-                    <motion.span
-                      key={`${wordIndex}-${letterIndex}`}
-                      variants={letterVariants}
-                      className={
-                        wordIndex === 1 || wordIndex === 2 
-                          ? "inline-block text-primary italic" 
-                          : "inline-block text-charcoal"
-                      }
-                    >
-                      {letter}
-                    </motion.span>
-                  ))}
-                </span>
-              ))}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] mb-6 lg:mb-8 tracking-tighter perspective-1000">
+              <ShinyText
+                shineColor="#ffffff"
+                speed={3}
+              >
+                {words.map((word, wordIndex) => (
+                  <span key={wordIndex} className="inline-block mr-3 last:mr-0 whitespace-nowrap">
+                    {word.split("").map((letter, letterIndex) => (
+                      <motion.span
+                        key={`${wordIndex}-${letterIndex}`}
+                        variants={letterVariants}
+                        className={
+                          wordIndex === 1 || wordIndex === 2 
+                            ? "inline-block text-primary italic" 
+                            : "inline-block text-charcoal"
+                        }
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
+                  </span>
+                ))}
+              </ShinyText>
             </h1>
             
             <motion.p 

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Zap, DollarSign, Users } from "lucide-react";
+import ElectricBorder from "./ElectricBorder";
 
 const valuePoints = [
   {
@@ -43,13 +44,13 @@ export default function WhyChooseUs() {
               Your Local Partner in Quality Car Care
             </h3>
             <p className="text-charcoal/70 text-lg mb-8 leading-relaxed">
-              CarFiti is built on a simple promise — to deliver consistent, high-quality automotive care you can rely on. 
+              CarFiti is built on a simple promise — to deliver consistent, high-quality automotive care you can rely on.
               We tailor our services for convenience, value, and peace of mind.
             </p>
-            
+
             <div className="space-y-4">
               {valuePoints.map((point, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -71,15 +72,20 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="rounded-[40px] overflow-hidden shadow-2xl bg-charcoal aspect-square flex items-center justify-center text-white relative group">
-               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
-               <div className="text-center p-12">
-                 <ShieldCheck size={100} className="mx-auto mb-6 text-accent" />
-                 <h4 className="text-3xl font-bold mb-4">Quality Guaranteed</h4>
-                 <p className="text-white/60">We use only professional-grade products and follow strict quality control standards for every vehicle.</p>
-               </div>
-            </div>
-            
+            <ElectricBorder color="#2563eb" speed={1}
+              chaos={0.12}
+              thickness={2} 
+              borderRadius={40}>
+              <div className="rounded-[40px] overflow-hidden shadow-2xl bg-charcoal aspect-square flex items-center justify-center text-white relative group">
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
+                <div className="text-center p-12">
+                  <ShieldCheck size={100} className="mx-auto mb-6 text-accent" />
+                  <h4 className="text-3xl font-bold mb-4">Quality Guaranteed</h4>
+                  <p className="text-white/60">We use only professional-grade products and follow strict quality control standards for every vehicle.</p>
+                </div>
+              </div>
+            </ElectricBorder>
+
             {/* Decoraive elements */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-3xl -z-10" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-10" />
