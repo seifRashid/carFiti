@@ -57,47 +57,47 @@ export default function Services() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
 
   return (
-    <section ref={targetRef} id="services" className="relative h-[300vh] bg-white z-10">
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden py-20">
+    <section ref={targetRef} id="services" className="relative h-[500vh] bg-white z-10 pt-24">
+      <div className="sticky top-0 h-screen flex flex-col justify-center  pt-20 pb-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-12">
           <div className="max-w-3xl">
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-primary font-bold tracking-wider uppercase text-sm mb-3"
+              className="text-primary font-bold tracking-wider uppercase text-sm"
             >
               Our Services
             </motion.h2>
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-bold text-charcoal mb-6"
+              className="text-4xl md:text-5xl font-bold text-charcoal mb-3"
             >
               Explore our range of premium car care solutions
             </motion.h3>
             <div className="flex items-center space-x-4 text-charcoal/40 font-medium">
-               <span>Scroll to explore</span>
-               <motion.div 
-                 animate={{ x: [0, 10, 0] }}
-                 transition={{ duration: 1.5, repeat: Infinity }}
-               >
-                 <ArrowRight size={20} />
-               </motion.div>
+              <span>Scroll to explore</span>
+              <motion.div
+                animate={{ x: [0, 10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <ArrowRight size={20} />
+              </motion.div>
             </div>
           </div>
         </div>
 
         {/* Horizontal Scroll Area */}
         <div className="flex">
-          <motion.div style={{ x }} className="flex gap-8 px-4 sm:px-6 lg:px-8">
+          <motion.div style={{ x }} className="flex gap-8 px-4 sm:px-6 lg:px-8 py-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="w-[350px] md:w-[450px] shrink-0 bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-2xl transition-all flex flex-col h-[500px]"
+                className="w-[350px] md:w-[450px] shrink-0 bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-2xl transition-all flex flex-col min-h-full"
               >
                 <div className={`w-20 h-20 rounded-3xl ${service.color} flex items-center justify-center mb-8`}>
                   {service.icon}
@@ -106,8 +106,8 @@ export default function Services() {
                 <p className="text-charcoal/60 text-lg mb-8 flex-grow leading-relaxed">
                   {service.description}
                 </p>
-                <Link 
-                  href={service.href} 
+                <Link
+                  href={service.href}
                   className="inline-flex items-center text-primary font-bold group text-lg"
                 >
                   <span>{service.cta}</span>
