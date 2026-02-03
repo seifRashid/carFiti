@@ -41,8 +41,8 @@ export default function Process() {
         <div className="relative">
           {/* Connector Line (Desktop) */}
           <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -translate-y-1/2 -z-10" />
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -51,7 +51,7 @@ export default function Process() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative group"
               >
-                <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm group-hover:shadow-md transition-all h-full">
+                <div className="bg-white p-6 md:p-8 rounded-3xl border border-gray-100 shadow-sm group-hover:shadow-md transition-all h-full">
                   <div className="text-5xl font-black text-primary/10 mb-6 group-hover:text-primary/20 transition-colors">
                     {step.number}
                   </div>

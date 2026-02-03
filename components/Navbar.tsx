@@ -67,13 +67,13 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden absolute top-0 left-0 w-full h-screen bg-white transition-all duration-500 flex flex-col items-center justify-center space-y-8",
+          "md:hidden fixed top-0 left-0 w-full h-screen bg-white transition-all duration-500 flex flex-col items-center justify-center space-y-8 z-50",
           isOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
         )}
       >
-        <button 
+        <button
           onClick={() => setIsOpen(false)}
-          className="absolute top-6 right-6 p-2 text-charcoal"
+          className="absolute top-6 right-6 p-2 text-charcoal hover:bg-gray-100 rounded-full transition-colors"
         >
           <X size={32} />
         </button>

@@ -13,7 +13,7 @@ export default function Hero() {
 
   const title = "Professional Car Care You Can Trust";
   const words = title.split(" ");
-  
+
   // Custom theme colors for ShinyText
   const charcoal = "#0f172a";
   const primary = "#2563eb";
@@ -44,7 +44,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[110vh] w-full flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-[100dvh] lg:min-h-[110vh] w-full flex items-center justify-center overflow-hidden bg-white">
       {/* Background Gradients (Modern Mesh Style) */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px] animate-pulse" />
@@ -52,12 +52,12 @@ export default function Hero() {
       </div>
 
       {/* Right Blue Background Column - Kinetic Parallax */}
-      <motion.div 
+      <motion.div
         style={{ y: y1 }}
-        className="absolute right-0 top-0 w-1/3 h-[150%] bg-primary hidden lg:block z-0" 
+        className="absolute right-0 top-0 w-1/3 h-[150%] bg-primary hidden lg:block z-0"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 pt-32 pb-16 lg:py-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 pt-28 pb-12 lg:py-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -68,7 +68,7 @@ export default function Hero() {
             className="text-center lg:text-left mx-auto lg:mx-0 max-w-2xl lg:max-w-xl"
           >
             {/* Social Proof Badge */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
@@ -106,8 +106,8 @@ export default function Hero() {
                         key={`${wordIndex}-${letterIndex}`}
                         variants={letterVariants}
                         className={
-                          wordIndex === 1 || wordIndex === 2 
-                            ? "inline-block text-primary italic" 
+                          wordIndex === 1 || wordIndex === 2
+                            ? "inline-block text-primary italic"
                             : "inline-block text-charcoal"
                         }
                       >
@@ -118,8 +118,8 @@ export default function Hero() {
                 ))}
               </ShinyText>
             </h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.2, duration: 0.8 }}
@@ -129,27 +129,27 @@ export default function Hero() {
             </motion.p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-10">
-               <motion.div 
-                 initial={{ opacity: 0, y: 10 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 1.4 }}
-                 className="flex items-center space-x-2 text-charcoal/70"
-               >
-                 <CheckCircle size={20} className="text-primary" />
-                 <span className="font-semibold text-sm">Eco-Friendly Products</span>
-               </motion.div>
-               <motion.div 
-                 initial={{ opacity: 0, y: 10 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ delay: 1.5 }}
-                 className="flex items-center space-x-2 text-charcoal/70"
-               >
-                 <CheckCircle size={20} className="text-primary" />
-                 <span className="font-semibold text-sm">Certified Technicians</span>
-               </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.4 }}
+                className="flex items-center space-x-2 text-charcoal/70"
+              >
+                <CheckCircle size={20} className="text-primary" />
+                <span className="font-semibold text-sm">Eco-Friendly Products</span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5 }}
+                className="flex items-center space-x-2 text-charcoal/70"
+              >
+                <CheckCircle size={20} className="text-primary" />
+                <span className="font-semibold text-sm">Certified Technicians</span>
+              </motion.div>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.8 }}
@@ -183,7 +183,7 @@ export default function Hero() {
                 className="w-full h-auto drop-shadow-[0_25px_25px_rgba(0,0,0,0.15)] lg:drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]"
               />
             </div>
-            
+
             {/* Mobile/Tablet Blue Accent */}
             <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-16 sm:w-24 h-48 sm:h-64 bg-primary lg:hidden rounded-l-3xl -z-10 opacity-20 sm:opacity-100" />
           </motion.div>

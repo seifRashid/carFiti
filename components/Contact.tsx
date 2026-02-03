@@ -8,9 +8,9 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-light-grey/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-gray-100">
-          <div className="grid lg:grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Contact Info */}
-            <div className="bg-charcoal p-12 lg:p-16 text-white">
+            <div className="bg-charcoal p-8 md:p-12 lg:p-16 text-white">
               <h2 className="text-3xl font-bold mb-8">Ready to Take Care of Your Car?</h2>
               <p className="text-white/60 mb-12 text-lg">
                 Whether you need a quick wash, detailed care, or regular maintenance, CarFiti is ready to serve you.
@@ -60,27 +60,27 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="p-12 lg:p-16">
+            <div className="p-8 md:p-12 lg:p-16">
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-charcoal mb-2">Full Name</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="John Doe"
                       className="w-full px-5 py-4 bg-light-grey rounded-2xl border-none focus:ring-2 focus:ring-primary/20 transition-all outline-none"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-charcoal mb-2">Phone Number</label>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="+254..."
                       className="w-full px-5 py-4 bg-light-grey rounded-2xl border-none focus:ring-2 focus:ring-primary/20 transition-all outline-none"
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="block text-sm font-semibold text-charcoal mb-2">Service Type</label>
                   <select className="w-full px-5 py-4 bg-light-grey rounded-2xl border-none focus:ring-2 focus:ring-primary/20 transition-all outline-none appearance-none">
@@ -93,7 +93,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-semibold text-charcoal mb-2">Your Message</label>
-                  <textarea 
+                  <textarea
                     rows={4}
                     placeholder="Tell us about your car needs..."
                     className="w-full px-5 py-4 bg-light-grey rounded-2xl border-none focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none"

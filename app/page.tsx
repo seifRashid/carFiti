@@ -12,7 +12,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <div id="about">
-         <WhyChooseUs />
+        <WhyChooseUs />
       </div>
       <Services />
       <Process />
