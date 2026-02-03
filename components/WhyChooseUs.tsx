@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldCheck, Zap, DollarSign, Users } from "lucide-react";
 import ElectricBorder from "./ElectricBorder";
@@ -47,6 +49,16 @@ export default function WhyChooseUs() {
               CarFiti is built on a simple promise — to deliver consistent, high-quality automotive care you can rely on.
               We tailor our services for convenience, value, and peace of mind.
             </p>
+
+            <Link href="/about">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="mb-8 px-8 py-3 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all block w-fit"
+              >
+                Learn More About Us
+              </motion.button>
+            </Link>
 
             <div className="space-y-4">
               {valuePoints.map((point, index) => (
