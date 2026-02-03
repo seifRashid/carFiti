@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
           >
             <ElectricBorder color="#2563eb" speed={1}
               chaos={0.12}
-              thickness={2} 
+              thickness={2}
               borderRadius={40}>
               <div className="rounded-[40px] overflow-hidden shadow-2xl bg-charcoal aspect-square flex items-center justify-center text-white relative group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none" />
