@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Product", href: "#services" },
+  { name: "Services", href: "/services" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -50,6 +50,12 @@ export default function Navbar() {
                   {link.name}
                 </Link>
               ))}
+              <Link
+                href="/booking"
+                className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold transition-transform hover:scale-105 shadow-lg shadow-primary/20"
+              >
+                Book Now
+              </Link>
             </div>
           </div>
 
