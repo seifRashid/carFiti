@@ -4,12 +4,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Star, Users, CheckCircle } from "lucide-react";
 import React from "react";
 import ShinyText from "@/components/ShinyText";
+import Link from "next/link";
 
 export default function Hero() {
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const y2 = useTransform(scrollY, [0, 500], [0, -150]);
-  const opacity = useTransform(scrollY, [0, 400], [1, 0]);
+  const opacity = useTransform(scrollY, [0, 800], [1, 0]);
 
   const title = "Professional Car Care You Can Trust";
   const words = title.split(" ");
@@ -155,16 +156,20 @@ export default function Hero() {
               transition={{ delay: 1.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto bg-primary text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl text-lg lg:text-xl font-bold shadow-2xl shadow-primary/40 hover:bg-primary/90 transition-all"
-              >
-                <span>Book a Service</span>
-              </motion.button>
-              <button className="w-full sm:w-auto px-8 lg:px-10 py-4 lg:py-5 rounded-2xl text-lg lg:text-xl font-bold text-charcoal hover:bg-light-grey transition-all border border-gray-100 lg:border-none backdrop-blur-sm bg-white/20">
-                View Our Services
-              </button>
+              <Link href="/booking">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full sm:w-auto bg-primary text-white px-8 lg:px-10 py-4 lg:py-5 rounded-2xl text-lg lg:text-xl font-bold shadow-2xl shadow-primary/40 hover:bg-primary/90 transition-all"
+                >
+                  <span>Book a Service</span>
+                </motion.button>
+              </Link>
+              <Link href="/services">
+                <button className="w-full sm:w-auto px-8 lg:px-10 py-4 lg:py-5 rounded-2xl text-lg lg:text-xl font-bold text-charcoal hover:bg-light-grey transition-all border border-gray-100 lg:border-none backdrop-blur-sm bg-white/20">
+                  View Our Services
+                </button>
+              </Link>
             </motion.div>
           </motion.div>
 
